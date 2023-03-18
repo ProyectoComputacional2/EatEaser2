@@ -1,5 +1,11 @@
-import { Component,OnInit } from '@angular/core';
-import * as Parallax from 'parallax-js';
+import { AfterViewInit, Component,ElementRef,EventEmitter,Input, Output, ViewChild } from '@angular/core';
+import { CargarScriptsService } from 'src/app/cargar-scripts.service';
+import { MenuComponent } from "src/app/componentes/menu/menu.component";
+
+
+
+
+
 
 @Component({
   selector: 'app-header',
@@ -7,13 +13,32 @@ import * as Parallax from 'parallax-js';
   styleUrls: ['./header.component.css']
 })
 
-export class HeaderComponent implements OnInit {
-  constructor(){}
-  ngOnInit(): void {
+export class HeaderComponent  implements AfterViewInit{
+  @ViewChild('menu-fondo')myId!: ElementRef;
+  @Output() sidenav = new EventEmitter();
+ child!:MenuComponent
+  constructor(){
+  
+  }
+  ngAfterViewInit() {
+ 
+    
+  }
+  mostrar():void{
+    if (this.child.box != null) {
+      this.child.box.style.visibility = 'visible';
+    console.log('visibles');
     
     }
-    ngAfterContentInit(){
-      const scene=document.getElementById('Parallax')!;
-      const parallaxInstance=new Parallax(scene,{relativeInput:true, hoverOnly:true});
+    else{
+      console.log('invisibles');
+      console.log(this.child.perro);
+      console.log(this.child.box);
     }
+  }
+  ngOnInit(): void {
+    
+
+    }
+ 
 }

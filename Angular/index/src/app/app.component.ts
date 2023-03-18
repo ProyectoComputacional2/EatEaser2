@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+const box=document.getElementById('menu-fondo')
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

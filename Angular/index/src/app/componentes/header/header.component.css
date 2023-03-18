@@ -258,6 +258,10 @@ width: 50%;
 height: 100%;
 
 }
+section{
+    
+    overflow: hidden!important;
+}
 .descripcion2,.bannerA{
     background-color: #9ebcce;
     position: relative;
@@ -446,6 +450,7 @@ width: 50%;
     width: 3cm;
 }
 footer{
+    overflow: hidden;
     background-color: #f8f2ea;
     color:#8791ab;
     display: grid;
@@ -557,4 +562,31 @@ margin-left: 20%;
     border-top: 2px solid white;
 padding: 2px;
           
+}
+@media (max-width: 700px){
+    .suscription{
+        flex-direction: column;
+
+    }
+    .boletin{
+        width: 100%;
+    }
+    .marcas{
+        width: 100%;
+    }
+    .descripcion3-fondo{
+        height: 100%;
+    }
+    .descripcion3-imagenes{
+     display: grid!important;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: 1fr 1fr 1fr;
+    }
+    .descripcion3-imagenes img{
+        width: 50%;
+    }
+    footer{
+        display: flex !important;
+        flex-direction: column;
+    }
 }
