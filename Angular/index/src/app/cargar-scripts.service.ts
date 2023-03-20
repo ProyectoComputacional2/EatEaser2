@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -6,12 +6,8 @@ import { Injectable } from '@angular/core';
 export class CargarScriptsService {
 
   constructor() { }
-  carga(archivos:string[]){
-    for(let archivo of archivos){
-      let script=document.createElement('script')
-    script.src='./assets/js/'+archivo+".js"
-  let body=document.getElementsByTagName("body")[0];
-  body.appendChild(script)  
-  }
-  }
+
+  @Output() menu_activado:EventEmitter<any>= new EventEmitter<any>();
+
+
 }

@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap');
+#menu-fondo{
+	background-image: url('/assets/img/menu_bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 2%;
+	padding-top: 5%;
+	padding-bottom: 0%;
+	color: #8791ab;
+    position: fixed;
+    z-index: 2;
+}
+.menu-grid-info{
+
+	background-image: url('/assets/img/menu_overbg.png');
+	background-repeat: repeat;
+	border-radius: 30px;
+	opacity: 0.9;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 60px 1fr;
+	grid-gap: 0px;
+}
+.menu-separation{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Antic Didone', serif;
+	font-size: 18px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	
+	padding: 5%;
+	padding-top: 2%;
+
+	
+}
+
+.botones{
+	background-color:transparent;
+	border:transparent
+}
+nav{
+display: flex;
+flex-direction: column;
+
+}
+nav a {
+	margin:20px;
+	
+	background-image: linear-gradient(#8791ab, #8791ab);
+	background-size: 0% 1px;
+	background-position-y: 100%;
+	background-position-x: 0%;
+	background-repeat: no-repeat;
+	transition: background-size 0.2s ease-in-out;
+	text-decoration: none;
+  
+}
+nav a:hover{
+	
+	background-size: 100% 1px;
+}
+
+
+#menu-phone{
+grid-column: span 2;
+}
+#close{
+	border:transparent;
+	background-color: transparent;
+	margin-bottom: 10px;
+}
+#logo{
+	width: 70px;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#text-input{
+	border:1px solid #004aad;
+	border-top: transparent;
+	border-left: transparent;
+	border-right: transparent;
+	background: transparent;
+	
+}
+#radio-button{
+	background-color: white;
+	border:1px white;
+	width: 18px;
+	height: 18px;
+	border-radius: 70%;
+	
+}
+#terminos{
+	font-size: 12px;
+	text-transform: none;
+}
+#suscription-btn{
+	border: 1px solid #004aad;
+	background-color: transparent;
+	border-radius: 20px;
+	width: 100px;
+}
+
+.redes{
+	color:#004aad;;
+	opacity: 1;
+}
+#boletin{
+	grid-gap: 50px;
+	justify-content: space-arround;
+}
+.boletin-top{
+	grid-column: span 3;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	padding-left: 1%;
+}
+.suscipcion{
+	display: flex;
+	flex-direction: row;
+}
+.flex{
+	display: flex;
+}
