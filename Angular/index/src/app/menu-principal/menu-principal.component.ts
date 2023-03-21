@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CargarScriptsService } from '../cargar-scripts.service';
 
+
 @Component({
   selector: 'app-menu-principal',
   templateUrl: './menu-principal.component.html',
@@ -15,6 +16,4 @@ constructor( ){
   ngOnInit(): void {
     
   }
-
-
 }
