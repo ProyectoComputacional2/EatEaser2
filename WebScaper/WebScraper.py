@@ -7,9 +7,9 @@ import time
 import csv
 import os
 import pandas as pd
-from textblob import TextBlob
 from pytube import YouTube
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+import glob
 
 
 
@@ -69,25 +69,11 @@ def ScrapCommentandInfo(url):
         writer.writerow([video_id, title, authortext])
 
     # Escribir y crear un CSV con los comentarios del video
-    output_file = os.path.join(os.getcwd(), f"./comments/{titleforCSV}.csv")
-    with open(output_file, 'w', newline='', encoding='utf-8') as file:
+    output_file = "comments.csv"
+    with open(output_file, 'a', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
-        writer.writerow(["Comment"])
         for comment in comment_list:
-            writer.writerow([comment])
-    # Leer CSV 
-    df = pd.read_csv(output_file)
-
-    # Instanciar el analizador de sentimientos de VADER
-    analyzer = SentimentIntensityAnalyzer()
-
-    # Realizar análisis de sentimientos en los comentarios
-    df["Sentiment"] = df["Comment"].apply(lambda x: analyzer.polarity_scores(x))
-    df = pd.concat([df.drop(['Sentiment'], axis=1), df['Sentiment'].apply(pd.Series)], axis=1)
-
-    # Ecribir Valor de Analisis de Sentimiento
-    df.to_csv(output_file, index=False)
-
+            writer.writerow([video_id, comment])
     
 #posiblemente roto por ahora, API de Youtube no va(pytube)
 def ScrapText(url):
@@ -104,8 +90,6 @@ def ScrapText(url):
     
 
 
-
-
 if __name__ == "__main__":
     
     #lista de URLs
@@ -118,7 +102,28 @@ if __name__ == "__main__":
         "https://www.youtube.com/watch?v=0tOpnSIBueU",
     ]
 
+    output_file = "comments.csv"
+
+    with open(output_file, 'a', newline='', encoding='utf-8') as file:
+        writer = csv.writer(file)
+        writer.writerow(["video_id","Comment"])
+
     for url in urls:
         ScrapCommentandInfo(url)
         #ScrapText(url)
-        
+
+        # Leer CSV 
+
+    
+    df = pd.read_csv(output_file)
+
+    # Instanciar el analizador de sentimientos de VADER
+    analyzer = SentimentIntensityAnalyzer()
+
+    # Realizar análisis de sentimientos en los comentarios
+    df["Sentiment"] = df["Comment"].apply(lambda x: analyzer.polarity_scores(x))
+    df = pd.concat([df.drop(['Sentiment'], axis=1), df['Sentiment'].apply(pd.Series)], axis=1)
+
+    # Ecribir Valor de Analisis de Sentimiento
+    df.to_csv(output_file, index=False)
+
