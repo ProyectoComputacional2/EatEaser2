@@ -1,33 +1,25 @@
-<img src="https://github.com/adobrasca512/EatEaser/blob/pruebasCarlow/Interfaz/imagenes/chef-logo.png" alt="mypy logo" width="100px"/>
+# laravel-angular-api-authentication-full
+This a Complete Series of Laravel and Angular Project on API Authentication with the famous laravel passport package, which provides full Oauth2.0 server implementation on your laravel project in minutes. We will be using Angular 12 for frontend API calls. You can download the source code from GitHub which will be uploaded after the completion of the project. So subscribe and click on the bell button for notification. In this video we will install Angular 12 and Setup Admin LTE3 Theme for Login, Register, Forgot, and Reset Password pages.
 
-Compañía Eateaser
-=======================================
+# Chapter-
+1. Setup Angual 12
+2. Set-up Laravel 7
+3. Login
+4. Logout from all deivice
+5. Register
+6. Forgot Password
+7. Reset Password
+8. Auth Gurd in angular routes
 
-EatEaser se enmarca en el ámbito de la inteligencia artificial y el procesamiento del lenguaje natural, tiene una aplicación práctica en el campo de la cocina, queremos dar una mejor accesibilidad a las recetas de cocina y una mejor experiencia para el usuario al clasificar recetas específicas. 
-## Información Startup
-Este proyecto tiene como objetivo principal procesar recetas de cocina, extrayendo el audio de los videos para convertirlo en un formato de texto mediante técnicas de reconocimiento de voz, para luego utilizar técnicas de procesamiento del lenguaje natural para limpiar y preparar los datos para su uso en un modelo de clasificación. Antes de programar con python estos modelos de clasificación, se realizó un estudio de los mejores modelos para la clasificación de documentos de texto, mediante la herramienta RapidMiner. Con todo esto se pretende mejorar la experiencia del usuario al organizar recetas, mediante la clasificación automática en diferentes categorías para su fácil acceso.
+## Full Playlist- 
+https://www.youtube.com/playlist?list=PL397yT3D1n9ipqiMZug6mdPIczG2fmfjK 
 
-Quick start
------------
-Eateaser necesita tener instalado:
-```
-python get-pip.py
-```
-Instalación de requirements.txt:
-Abriremos un terminal de comandos en nuestro entorno virtual, navegaremos a la carpeta principal de la interfaz 
-```
-cd /path/Eateaser/Interfaz
-```
-En el terminal de comandos deberemos ejecutar el siguiente comando:
-```
-pip install -r requirements.txt
-```
-sto nos instalará todas las librerías/módulos necesarios y cuando ya haya finalizado toda la instalación podremos ejecutar el main.py sin ningún impedimento.
-Ejecute el comando para iniciar el programa:
-```
-python main.py
-```
-Capturas Interfaz
------------
-<img src="https://github.com/adobrasca512/EatEaser/blob/pruebasCarlow/Interfaz/imagenes/Captura%20de%20pantalla_20230114_193423.png" alt="mypy logo" width="500px"/>
-<img src="https://github.com/adobrasca512/EatEaser/blob/pruebasCarlow/Interfaz/imagenes/Captura%20de%20pantalla_20230116_135417.png" alt="mypy logo" width="500px"/>
+## Website
+https://myiotlab.in
+
+
+## Installation
+1. Go to angular folder and run - npm install && npm run dev. Then run the development server by - npm start
+2. Go to laravel folder and run - composer install.
+3. copy .env file and set up your creadentials
+4. run php artisan key:generate and run the development server by - php artisan server
